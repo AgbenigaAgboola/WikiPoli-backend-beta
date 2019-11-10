@@ -84,9 +84,7 @@
             box-shadow: 0 3px 50px -2px rgba(0, 0, 0, 0.2) !important;
         }
 
-
-
-        /* Responsive styling */
+            /* Responsive styling */
         @media screen and (max-width: 768px) {
             h1 {
                 font-size: 30px;
@@ -127,25 +125,54 @@
 
             .search-box {
                 margin-bottom: 12px;
-                width: 90%
+                width: ;
+                display: flex;
+                align-items: center;
+                
             }
 
             .search-line input {
-                width: 80% !important;
+                width: 280px !important;
                 padding: 5px 10px;
+                height: 35px;
 
             }
 
             .search-line button {
                 padding: 5px;
-                width: 20% !important;
-
+                width: 70px !important;
+                height: 35px;
+                padding-left: 0;
+                padding-right: 0;
+        
             }
 
             .search-line h3 {
                 font-size: 19px
             }
+      
         }
+    @media (max-width: 360px){
+        .search-line input {
+                width: 260px !important;
+            }
+        .search-line button{
+             width: 70px!important;
+         }
+    }
+     @media (max-width: 320px){
+        .search-line input {
+                width: 220px !important;
+            }
+         
+    }
+    @media (max-width: 300px){
+        .search-line input {
+                width: 180px !important;
+               
+
+            }
+    }
 </style>
 @endsection
 @section('content')
@@ -162,7 +189,7 @@
                 <form action="{{url('search')}}" method="get">
                 <div class="justify-content-right search-box">
                     <input type="text" name="q" placeholder="search" class="">
-                    <button type="submit" class="">Search</button>
+                    <button type="submit" class="desktop-search">Search</button>
                 </div>
                 </form>
 
